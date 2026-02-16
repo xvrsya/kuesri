@@ -1,9 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>TES</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOKO KUE SRI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #fff6f2, #ffe9f0);
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff7a9c, #ff4d6d);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 5px;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: 0.4s ease;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 0.8s forwards;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .price {
+            color: #ff4d6d;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff7a9c, #ff4d6d);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffe3ec;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>WEBSITE JALAN</h1>
+
+<header>
+    <h1>🍰 TOKO KUE SRI</h1>
+    <p>Risol • Onde-onde • Gemblong</p>
+</header>
+
+<div class="container">
+    <div class="title">
+        <h2>Daftar Menu</h2>
+        <p>Harga Rp 2.000 / pcs • Minimal order 10 pcs</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="risol.jpg" alt="Risol">
+            <div class="card-content">
+                <h3>Risol</h3>
+                <p class="price">Rp 2.000 / pcs</p>
+                <a class="btn" href="https://wa.me/6285156182307?text=Halo%20saya%20mau%20pesan%20Risol" target="_blank">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="onde.jpg" alt="Onde-onde">
+            <div class="card-content">
+                <h3>Onde-onde</h3>
+                <p class="price">Rp 2.000 / pcs</p>
+                <a class="btn" href="https://wa.me/6285156182307?text=Halo%20saya%20mau%20pesan%20Onde-onde" target="_blank">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="gemblong.jpg" alt="Gemblong">
+            <div class="card-content">
+                <h3>Gemblong</h3>
+                <p class="price">Rp 2.000 / pcs</p>
+                <a class="btn" href="https://wa.me/6285156182307?text=Halo%20saya%20mau%20pesan%20Gemblong" target="_blank">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 TOKO KUE SRI • Order via WhatsApp
+</footer>
+
 </body>
 </html>
